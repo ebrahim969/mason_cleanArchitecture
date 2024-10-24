@@ -6,7 +6,7 @@ import 'package:fpdart/fpdart.dart';
 class {{featureName.pascalCase()}}UseCase  implements UseCase<List<String> , TestParams>{
    final {{featureName.pascalCase()}}Repository repository;
 
-  {{featureName.pascalCase()}}Repository(this.repository);
+  {{featureName.pascalCase()}}UseCase (this.repository);
   @override
   Future<Either<Failures, List<String>>> call(
       FetchSavedUserBlogsParams params) async {
