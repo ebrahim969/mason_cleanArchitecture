@@ -1,5 +1,5 @@
 import 'package:fpdart/fpdart.dart';
-import '../../../../core/error/failures.dart';
+import '../../../../core/core/error/failures.dart';
 import '../entity/{{featureName}}_entity.dart';
 
 

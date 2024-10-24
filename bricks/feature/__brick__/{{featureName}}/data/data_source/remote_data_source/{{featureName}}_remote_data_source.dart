@@ -1,4 +1,4 @@
-import'../../../../core/network/api_client.dart';
+import'../../../../core/core/network/api_client.dart';
 
 abstract interface class {{featureName.pascalCase()}}RemoteDataSource {}
 
