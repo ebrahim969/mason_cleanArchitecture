@@ -1,5 +1,5 @@
-import '../../../../core/core/error/failures.dart';
-import '../../../../core/core/common/use_case/use_case.dart';
+import '../../../../core/error/failures.dart';
+import '../../../../core/common/use_case/use_case.dart';
 import '../repository/{{featureName}}_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
