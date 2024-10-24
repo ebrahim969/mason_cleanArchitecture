@@ -4,7 +4,6 @@ Below is a list of default dependencies used in this project:
 ```yaml
 dependencies:
   cached_network_image:
-  connectivity_plus:
   country_code_picker:
   cupertino_icons:
   dio:
