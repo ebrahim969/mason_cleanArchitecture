@@ -1,3 +1,59 @@
+## Bricks
+
+### MVVM Flutter Project Template
+
+This brick generates a Flutter project template following the MVVM architecture, promoting a clean and scalable code structure.
+
+### Add New Feature
+
+Use this brick to add a new feature to your project. It ensures proper integration and follows established coding patterns.
+
+### Generate Assets
+
+This brick creates the necessary assets folder with icons, images, and language files, promoting a standardized resource management approach.
+
+### Generate README
+
+Automatically generate a README file for your project, ensuring consistent and informative documentation.
+
+
+## Usage 
+
+### install maosn cli 
+```shell
+dart pub global activate mason_cli
+```
+
+### add mason to your project 
+```shell
+mkdir mason
+cd mason
+mason init
+```
+
+### add bricks to mason.yaml file 
+- replace paths with the bricks path on your pc 
+```yaml
+bricks:
+  readme:
+    path: ./bricks/readme
+  assets:
+    path: ./bricks/assets
+  core:
+    path: ./bricks/core
+  feature:
+    path: ./bricks/feature
+```
+
+### get bricks 
+```shell
+mason get
+```
+### clear mason cache 
+```shell
+mason cache clear
+```
+
 ## Dependencies
 
 Below is a list of default dependencies used in this project:
