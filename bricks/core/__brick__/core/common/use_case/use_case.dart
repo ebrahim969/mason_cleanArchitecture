@@ -1,4 +1,5 @@
-import 'package:fpdart/fpdart.dart';
+import 'package:dartz/dartz.dart';
+
 import '../../error/failures.dart';
 
 abstract interface class UseCase<SuccessType, Params> {

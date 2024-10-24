@@ -25,3 +25,9 @@ environment:
 #  * an optional prompt phrase used when asking for the variable
 #  * a list of values (enums only)
 #  * an optional separator (list only)
+vars:
+  projectName:
+    type: string
+    description: Your project name
+    default: test
+    prompt: What is your project name?
