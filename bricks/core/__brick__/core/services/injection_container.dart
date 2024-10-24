@@ -5,4 +5,4 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sgr_unity/core/cache/cache_helper.dart';
 import 'package:sgr_unity/core/network/connection_checker.dart';
 
-part 'service_locator.main.dart';
+part 'injection_container.main.dart';

@@ -1,4 +1,4 @@
-part of 'service_locator.dart';
+part of 'injection_container.dart';
 
 final sl = GetIt.instance;
 Future<void> initDependencies() async {
