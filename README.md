@@ -1,22 +1,3 @@
-## Bricks
-
-### MVVM Flutter Project Template
-
-This brick generates a Flutter project template following the MVVM architecture, promoting a clean and scalable code structure.
-
-### Add New Feature
-
-Use this brick to add a new feature to your project. It ensures proper integration and follows established coding patterns.
-
-### Generate Assets
-
-This brick creates the necessary assets folder with icons, images, and language files, promoting a standardized resource management approach.
-
-### Generate README
-
-Automatically generate a README file for your project, ensuring consistent and informative documentation.
-
-
 ## Usage 
 
 ### install maosn cli 
@@ -36,22 +17,18 @@ mason init
 ```yaml
 bricks:
   readme:
-    path: ./bricks/readme
+    path: D:/projects/bricks/readme (replace with real path)
   assets:
-    path: ./bricks/assets
+    path: D:/projects/bricks/assets (replace with real path)
   core:
-    path: ./bricks/core
+    path: D:/projects/bricks/core (replace with real path)
   feature:
-    path: ./bricks/feature
-```
+    path: D:/projects/bricks/feature (replace with real path)
+``` 
 
 ### get bricks 
 ```shell
 mason get
-```
-### clear mason cache 
-```shell
-mason cache clear
 ```
 
 ## Dependencies
@@ -143,4 +120,9 @@ mason make readme -o ../
         - asset: assets/fonts/teshrin/fontName-Bold.ttf
           weight: 600
 
+```
+
+### clear mason cache 
+```shell
+mason cache clear
 ```
