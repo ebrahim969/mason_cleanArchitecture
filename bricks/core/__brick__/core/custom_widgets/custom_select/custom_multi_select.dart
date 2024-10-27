@@ -1,9 +1,7 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
 import 'package:test_mason/core/extension/context_extension.dart';
-
 import '../../../generated/l10n.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_text_style.dart';

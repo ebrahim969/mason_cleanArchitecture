@@ -9,7 +9,6 @@ import 'package:test_mason/core/extension/context_extension.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_text_style.dart';
 
-
 enum FormFieldBorder { underLine, outLine, none }
 
 class CustomFormField extends StatefulWidget {
@@ -94,14 +93,16 @@ class _CustomFormFieldState extends State<CustomFormField> {
                 Expanded(
                   child: Text(
                     widget.title!,
-                    style: widget.titleStyle ?? AppTextStyle.formTitleStyle(context),
+                    style: widget.titleStyle ??
+                        AppTextStyle.formTitleStyle(context),
                   ),
                 ),
               },
               if (widget.otherSideTitle != null) ...{
                 Text(
                   widget.otherSideTitle!,
-                  style: widget.titleStyle ?? AppTextStyle.formTitleStyle(context),
+                  style:
+                      widget.titleStyle ?? AppTextStyle.formTitleStyle(context),
                 ),
               }
             ],
@@ -127,7 +128,8 @@ class _CustomFormFieldState extends State<CustomFormField> {
               keyboardType: widget.keyboardType,
               obscureText: widget.isPassword ? _obscureText : false,
               style: widget.textStyle ?? AppTextStyle.textFormStyle(context),
-              autovalidateMode: widget.autovalidateMode ?? AutovalidateMode.onUserInteraction,
+              autovalidateMode:
+                  widget.autovalidateMode ?? AutovalidateMode.onUserInteraction,
               maxLines: widget.maxLines,
               cursorColor: widget.focusColor ?? AppColor.mainAppColor(context),
               inputFormatters: widget.inputFormatters,
@@ -142,40 +144,53 @@ class _CustomFormFieldState extends State<CustomFormField> {
                         ? Colors.transparent
                         : AppColor.textFormFillColor(context)),
                 filled: true,
-                border: _border(color: widget.unFocusColor ?? AppColor.textFormBorderColor(context)),
-                disabledBorder: _border(color: widget.unFocusColor ?? AppColor.textFormBorderColor(context)),
-                focusedBorder: _border(color: widget.unFocusColor ?? AppColor.mainAppColor(context)),
-                enabledBorder: _border(color: widget.unFocusColor ?? AppColor.textFormBorderColor(context)),
-                contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                prefixIcon: widget.country != null && context.locale == const Locale('en')
+                border: _border(
+                    color: widget.unFocusColor ??
+                        AppColor.textFormBorderColor(context)),
+                disabledBorder: _border(
+                    color: widget.unFocusColor ??
+                        AppColor.textFormBorderColor(context)),
+                focusedBorder: _border(
+                    color:
+                        widget.unFocusColor ?? AppColor.mainAppColor(context)),
+                enabledBorder: _border(
+                    color: widget.unFocusColor ??
+                        AppColor.textFormBorderColor(context)),
+                contentPadding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                prefixIcon:
+                    widget.country != null && context.locale == const e('en')
+                        ? Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              widget.prefixIcon ?? const SizedBox(),
+                              TextButton(
+                                onPressed: null,
+                                // onPressed:
+                                //     widget.onCountrySelect != null ? _select : null,
+                                child: Text(
+                                  '${widget.country?.flagEmoji} +${widget.country?.phoneCode}',
+                                  style: widget.textStyle ??
+                                      AppTextStyle.textFormStyle(context),
+                                  textDirection: ui.TextDirection.ltr,
+                                ),
+                              ),
+                            ],
+                          )
+                        : widget.prefixIcon,
+                suffixIcon: widget.country != null &&
+                        context.locale == const Locale('ar')
                     ? Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          widget.prefixIcon ?? const SizedBox(),
                           TextButton(
                             onPressed: null,
                             // onPressed:
                             //     widget.onCountrySelect != null ? _select : null,
                             child: Text(
                               '${widget.country?.flagEmoji} +${widget.country?.phoneCode}',
-                              style: widget.textStyle ?? AppTextStyle.textFormStyle(context),
-                              textDirection: ui.TextDirection.ltr,
-                            ),
-                          ),
-                        ],
-                      )
-                    : widget.prefixIcon,
-                suffixIcon: widget.country != null && context.locale == const Locale('ar')
-                    ? Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          TextButton(
-                            onPressed: null,
-                            // onPressed:
-                            //     widget.onCountrySelect != null ? _select : null,
-                            child: Text(
-                              '${widget.country?.flagEmoji} +${widget.country?.phoneCode}',
-                              style: widget.textStyle ?? AppTextStyle.textFormStyle(context),
+                              style: widget.textStyle ??
+                                  AppTextStyle.textFormStyle(context),
                               textDirection: ui.TextDirection.ltr,
                             ),
                           ),
@@ -190,9 +205,12 @@ class _CustomFormFieldState extends State<CustomFormField> {
                               });
                             },
                             child: Icon(
-                              _obscureText ? Icons.visibility_off_rounded : Icons.visibility_rounded,
+                              _obscureText
+                                  ? Icons.visibility_off_rounded
+                                  : Icons.visibility_rounded,
                               size: 20,
-                              color: widget.passwordColor ?? AppColor.hintColor(context),
+                              color: widget.passwordColor ??
+                                  AppColor.hintColor(context),
                             ),
                           )
                         : widget.suffixIcon,

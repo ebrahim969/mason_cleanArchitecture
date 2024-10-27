@@ -49,7 +49,6 @@ dependencies:
   cupertino_icons: ^1.0.6
   custom_timer: ^0.2.3
   dio: ^5.4.3+1
-  easy_localization: ^3.0.7
   easy_rich_text: ^2.1.0
   firebase_core: ^3.4.0
   firebase_messaging: ^15.1.0

@@ -15,7 +15,7 @@ extension ContextExtension on BuildContext {
     required String en,
   }) {
     String text = '';
-    switch (locale.languageCode) {
+    switch (intl.getCurrentLocale()) {
       case 'ar':
         text = ar;
         break;
@@ -30,7 +30,7 @@ extension ContextExtension on BuildContext {
     required dynamic ar,
     required dynamic en,
   }) {
-    switch (locale.languageCode) {
+    switch (intl.getCurrentLocale()) {
       case 'ar':
         return ar;
       case 'en':
@@ -42,7 +42,7 @@ extension ContextExtension on BuildContext {
     required VoidCallback ar,
     required VoidCallback en,
   }) {
-    switch (locale.languageCode) {
+    switch (intl.getCurrentLocale()) {
       case 'ar':
         ar.call();
         break;
