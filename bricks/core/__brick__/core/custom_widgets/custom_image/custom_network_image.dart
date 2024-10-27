@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
+
+import '../../images/app_images.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/navigator_methods.dart';
 import '../zoom_image/zoom_image_screen.dart';

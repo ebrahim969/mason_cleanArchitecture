@@ -1,6 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:../../extension/context_extension.dart';
+import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
+import 'package:test_mason/core/extension/context_extension.dart';
+
 import '../../../generated/l10n.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_text_style.dart';
@@ -27,7 +30,7 @@ class CustomMultiSelect extends StatefulWidget {
   final Color? unFocusColor;
   final String? title;
   final String? otherSideTitle;
-  final ApiResponse? apiResponse;
+  final CubitState? cubitState;
   final void Function()? onReload;
   final Widget? icon;
 
@@ -49,7 +52,7 @@ class CustomMultiSelect extends StatefulWidget {
     this.unFocusColor,
     this.title,
     this.otherSideTitle,
-    this.apiResponse,
+    this.cubitState,
     this.onReload,
     this.icon,
     this.formFieldBorder = FormFieldBorder.outLine,
@@ -107,7 +110,7 @@ class _CustomMultiSelectState extends State<CustomMultiSelect> {
           TextFormField(
             controller: _selectedEC,
             validator: (v) => widget.validator?.call(widget.value),
-            onTap: widget.apiResponse?.state == ResponseState.loading
+            onTap: widget.cubitState == CubitState.loading
                 ? null
                 : widget.items != null && widget.items?.isNotEmpty == true
                     ? () {
@@ -158,9 +161,9 @@ class _CustomMultiSelectState extends State<CustomMultiSelect> {
                 children: [
                   SizedBox(
                     width: 35,
-                    child: widget.apiResponse != null
+                    child: widget.cubitState != null
                         ? ApiResponseWidget(
-                            apiResponse: widget.apiResponse!,
+                           cubitState: widget.cubitState!,
                             onReload: widget.onReload,
                             isEmpty: false,
                             errorWidget: IconButton(

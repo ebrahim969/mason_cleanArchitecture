@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
 
 import '../../theme/app_colors.dart';
 import '../../theme/app_text_style.dart';
@@ -16,7 +17,7 @@ class CustomButton extends StatelessWidget {
   final Color? color;
   final Color? borderColor;
   final Gradient? gradient;
-  final ApiResponse? apiResponse;
+  final CubitState? cubitState;
   final bool isLoading;
   final bool isMainColor;
   final bool hasShadow;
@@ -34,7 +35,7 @@ class CustomButton extends StatelessWidget {
     this.suffixIcon = const SizedBox(),
     this.color,
     this.gradient,
-    this.apiResponse,
+    this.cubitState,
     this.isLoading = false,
     this.isMainColor = true,
     this.hasShadow = false,
@@ -47,7 +48,7 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return apiResponse?.state == ResponseState.loading || isLoading
+    return cubitState== CubitState.loading || isLoading
         ? const Center(
             child: CustomLoading(),
           )

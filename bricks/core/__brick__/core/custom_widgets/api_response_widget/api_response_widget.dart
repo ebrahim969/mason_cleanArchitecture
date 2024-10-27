@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
 
 import '../custom_loading/custom_loading.dart';
 import '../exception_widget/exception_widget.dart';
@@ -6,7 +7,7 @@ import '../no_data_widget/no_data_widget.dart';
 import '../offline_widget/offline_widget.dart';
 
 class ApiResponseWidget extends StatelessWidget {
-  final ApiResponse apiResponse;
+  final CubitState cubitState;
   final Widget child;
   final double loadingSize;
   final Widget? loadingWidget;
@@ -23,7 +24,7 @@ class ApiResponseWidget extends StatelessWidget {
   final Color? loadingColor;
   const ApiResponseWidget({
     super.key,
-    required this.apiResponse,
+    required this.cubitState,
     required this.child,
     required this.onReload,
     required this.isEmpty,
@@ -42,14 +43,14 @@ class ApiResponseWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    switch (apiResponse.state) {
-      case ResponseState.sleep:
+    switch (cubitState) {
+      case CubitState.sleep:
         if (initialChild) {
           return child;
         } else {
           return const SizedBox();
         }
-      case ResponseState.loading:
+      case CubitState.loading:
         return loadingWidget ??
             Center(
               child: CustomLoading(
@@ -57,8 +58,8 @@ class ApiResponseWidget extends StatelessWidget {
                 color: loadingColor,
               ),
             );
-      case ResponseState.complete:
-      case ResponseState.pagination:
+      case CubitState.complete:
+     
         if (isEmpty) {
           return emptyWidget ??
               Center(
@@ -70,7 +71,7 @@ class ApiResponseWidget extends StatelessWidget {
         } else {
           return child;
         }
-      case ResponseState.error:
+      case CubitState.error:
         return errorWidget ??
             Center(
               child: ExceptionWidget(
@@ -79,23 +80,8 @@ class ApiResponseWidget extends StatelessWidget {
                 onReload: onReload,
               ),
             );
-      case ResponseState.unauthorized:
-        return unauthorizedWidget ??
-            Center(
-              child: ExceptionWidget(
-                message: exceptionMessage,
-                axis: axis,
-                onReload: onReload,
-              ),
-            );
-      case ResponseState.offline:
-        return offlineWidget ??
-            Center(
-              child: OfflineWidget(
-                axis: axis,
-                onReload: onReload,
-              ),
-            );
+     
+   
     }
   }
 }

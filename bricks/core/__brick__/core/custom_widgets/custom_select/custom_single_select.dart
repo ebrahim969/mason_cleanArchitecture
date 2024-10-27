@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
 import 'package:test_mason/core/extension/context_extension.dart';
 
 import '../../../generated/l10n.dart';
@@ -30,7 +31,7 @@ class CustomSingleSelect extends StatefulWidget {
   final Color? unFocusColor;
   final String? title;
   final String? otherSideTitle;
-  final ApiResponse? apiResponse;
+  final CubitState? cubitState;
   final void Function()? onReload;
   final void Function()? onReInitial;
   final Widget? icon;
@@ -53,7 +54,7 @@ class CustomSingleSelect extends StatefulWidget {
     this.unFocusColor,
     this.title,
     this.otherSideTitle,
-    this.apiResponse,
+    this.cubitState,
     this.onReload,
     this.icon,
     this.onReInitial,
@@ -69,16 +70,16 @@ class CustomSingleSelect extends StatefulWidget {
 class _CustomSingleSelectState extends State<CustomSingleSelect> {
   final _selectedEC = TextEditingController();
 
-  void _showValue() {
-    Future.delayed(Duration.zero, () {
-      _selectedEC.text =
-          widget.items?.firstWhereOrNull((element) => element.value == widget.value)?.name ?? S().floorsExample.tr();
-    });
-  }
+  // void _showValue() {
+  //   Future.delayed(Duration.zero, () {
+  //     _selectedEC.text =
+  //         widget.items?.firstWhereOrNull((element) => element.value == widget.value)?.name ?? S().floorsExample.tr();
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
-    _showValue();
+   // _showValue();
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(
@@ -108,7 +109,7 @@ class _CustomSingleSelectState extends State<CustomSingleSelect> {
           TextFormField(
             controller: _selectedEC,
             validator: (v) => widget.validator?.call(widget.value),
-            onTap: widget.apiResponse?.state == ResponseState.loading
+            onTap: widget.cubitState == CubitState.loading
                 ? null
                 : widget.items != null && widget.items?.isNotEmpty == true
                     ? () {
@@ -159,9 +160,9 @@ class _CustomSingleSelectState extends State<CustomSingleSelect> {
                 children: [
                   SizedBox(
                     width: 35,
-                    child: widget.apiResponse != null
+                    child: widget.cubitState != null
                         ? ApiResponseWidget(
-                            apiResponse: widget.apiResponse!,
+                            cubitState: widget.cubitState!,
                             onReload: widget.onReload,
                             isEmpty: false,
                             errorWidget: IconButton(

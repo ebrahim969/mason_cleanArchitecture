@@ -3,6 +3,9 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
+import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
+import 'package:test_mason/core/services/injection_container.dart';
 import '../../generated/l10n.dart';
 import '../cache/hive/hive_methods.dart';
 import '../custom_widgets/custom_select/custom_select_item.dart';
@@ -116,51 +119,49 @@ class CommonMethods {
     );
   }
 
-  static void showToast({
-    required String message,
-    String? title,
-    //  String? icon,
-    ToastType type = ToastType.success,
-    Color? backgroundColor,
-    Color? textColor,
-    int seconds = 3,
-  }) {
-    BotToast.showCustomText(
-      duration: Duration(seconds: seconds),
-      toastBuilder: (cancelFunc) => CustomToast(
-        type: type,
-        title: title,
-        message: message,
-        backgroundColor: backgroundColor,
-        //icon: icon,
-        textColor: textColor,
-      ),
-    );
-  }
+  // static void showToast({
+  //   required String message,
+  //   String? title,
+  //   //  String? icon,
+  //   ToastType type = ToastType.success,
+  //   Color? backgroundColor,
+  //   Color? textColor,
+  //   int seconds = 3,
+  // }) {
+  //   BotToast.showCustomText(
+  //     duration: Duration(seconds: seconds),
+  //     toastBuilder: (cancelFunc) => CustomToast(
+  //       type: type,
+  //       title: title,
+  //       message: message,
+  //       backgroundColor: backgroundColor,
+  //       //icon: icon,
+  //       textColor: textColor,
+  //     ),
+  //   );
+  // }
 
-  static void showError({
-    ApiResponse? apiResponse,
-    required String message,
-    String? title,
-    String? icon,
-    Color? backgroundColor,
-    Color? textColor,
-    int seconds = 3,
-  }) {
-    //  BotToast.showText(text: message,backgroundColor: backgroundColor );
+  // static void showError({
+  //   required String message,
+  //   String? title,
+  //   String? icon,
+  //   Color? backgroundColor,
+  //   Color? textColor,
+  //   int seconds = 3,
+  // }) {
+  //   //  BotToast.showText(text: message,backgroundColor: backgroundColor );
 
-    BotToast.showCustomText(
-      duration: Duration(seconds: seconds),
-      toastBuilder: (context) => CustomToast(
-        title: title,
-        message: message,
-        type: apiResponse?.state == ResponseState.offline ? ToastType.offline : ToastType.error,
-        backgroundColor: backgroundColor,
-        //icon: icon,
-        textColor: textColor,
-      ),
-    );
-  }
+  //   BotToast.showCustomText(
+  //     duration: Duration(seconds: seconds),
+  //     toastBuilder: (context) => CustomToast(
+  //       title: title,
+  //       message: message,
+  //       backgroundColor: backgroundColor,
+  //       //icon: icon,
+  //       textColor: textColor,
+  //     ),
+  //   );
+  // }
 
   // static Future<bool> hasConnection() async {
   //   var connectivityResult = await (Connectivity().checkConnectivity());
@@ -266,6 +267,16 @@ class CommonMethods {
       ),
     );
   }
+   static Future<bool> hasConnection() async {
+  var isConnected=  await sl<InternetConnection>().hasInternetAccess;
+    if (isConnected) {
+      return true;
+    
+    } else {
+      return false;
+    }
+  }
+
 
   static bool endScroll(ScrollEndNotification t, VoidCallback onEnd) {
     if (t.metrics.pixels > 0 && t.metrics.atEdge) {
@@ -273,4 +284,5 @@ class CommonMethods {
     }
     return true;
   }
+
 }
