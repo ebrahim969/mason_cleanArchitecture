@@ -1,7 +1,7 @@
 import '../../../../core/error/failures.dart';
 import '../../../../core/common/use_case/use_case.dart';
 import '../repository/{{featureName}}_repository.dart';
-import 'package:fpdart/fpdart.dart';
+import 'package:dartz/dartz.dart';
 
 class {{featureName.pascalCase()}}UseCase  implements UseCase<List<String> , TestParams>{
    final {{featureName.pascalCase()}}Repository repository;

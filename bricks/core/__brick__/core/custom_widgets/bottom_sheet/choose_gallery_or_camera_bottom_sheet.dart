@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -77,7 +76,7 @@ class ChooseGalleryOrCameraBottomSheet extends StatelessWidget {
                         ),
                         const SizedBox(width: 10),
                         Text(
-                          tr(S().gallery),
+                          S().gallery,
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w400,

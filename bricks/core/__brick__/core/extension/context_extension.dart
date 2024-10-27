@@ -1,6 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart' as intl;
 
 extension ContextExtension on BuildContext {
   double width() => MediaQuery.sizeOf(this).width;
@@ -53,7 +51,7 @@ extension ContextExtension on BuildContext {
     }
   }
 
-  bool isRTL() {
-    return intl.Bidi.isRtlLanguage(locale.languageCode);
-  }
+  // bool isRTL() {
+  //   return intl.Bidi.isRtlLanguage(locale.languageCode);
+  // }
 }

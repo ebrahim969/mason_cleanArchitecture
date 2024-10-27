@@ -1,4 +1,4 @@
-import 'package:fpdart/fpdart.dart';
+import 'package:dartz/dartz.dart';
 import '../../../../core/error/failures.dart';
 import '../entity/{{featureName}}_entity.dart';
 
