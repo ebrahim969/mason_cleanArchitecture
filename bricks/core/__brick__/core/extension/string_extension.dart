@@ -1,9 +1,5 @@
-import 'package:intl/intl.dart' as intl;
 
 extension StringExtension on String {
-  String removeHtmlTags() {
-    return intl.Bidi.stripHtmlIfNeeded(this);
-  }
 
   String replaceToArabicNumber() {
     return replaceAll('0', '٠')

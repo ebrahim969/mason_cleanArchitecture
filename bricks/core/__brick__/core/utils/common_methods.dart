@@ -1,11 +1,8 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
-import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
-import 'package:test_mason/core/services/injection_container.dart';
 import '../../generated/l10n.dart';
 import '../cache/hive/hive_methods.dart';
 import '../custom_widgets/custom_select/custom_select_item.dart';
@@ -45,7 +42,7 @@ class CommonMethods {
         actions: <Widget>[
           CupertinoDialogAction(
             child: Text(
-              tr(S().ok),
+              S().ok,
               style: TextStyle(
                 color: Colors.red,
                 fontSize: 16,
@@ -92,7 +89,7 @@ class CommonMethods {
         actions: [
           CupertinoDialogAction(
             child: Text(
-              tr(S().no),
+              S().no,
               style: TextStyle(
                 color: AppColor.darkTextColor(context),
                 fontSize: 16,
@@ -105,7 +102,7 @@ class CommonMethods {
           CupertinoDialogAction(
             onPressed: onPressed,
             child: Text(
-              tr(S().yes),
+              S().yes,
               style: TextStyle(
                 color: AppColor.darkTextColor(context),
                 fontSize: 16,

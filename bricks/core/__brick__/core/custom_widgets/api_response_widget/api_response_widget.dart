@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
-
+import '../../enum/cubit_state/cubit_state.dart';
 import '../custom_loading/custom_loading.dart';
 import '../exception_widget/exception_widget.dart';
 import '../no_data_widget/no_data_widget.dart';
-import '../offline_widget/offline_widget.dart';
 
 class ApiResponseWidget extends StatelessWidget {
   final CubitState cubitState;

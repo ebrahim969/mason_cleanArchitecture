@@ -1,11 +1,12 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:test_mason/core/network/api_consumer.dart';
-import 'package:test_mason/core/network/app_interceptors.dart';
-import 'package:test_mason/core/network/end_points.dart';
-import 'package:test_mason/core/network/status_code.dart';
-import 'package:test_mason/core/services/injection_container.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+
+import '../services/injection_container.dart';
+import 'api_consumer.dart';
+import 'app_interceptors.dart';
+import 'end_points.dart';
+import 'status_code.dart';
 
 
 

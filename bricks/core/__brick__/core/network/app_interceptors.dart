@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:test_mason/core/cache/hive/hive_methods.dart';
-import 'package:test_mason/core/network/status_code.dart';
-import 'package:test_mason/core/routes/app_routers_import.dart';
-import 'package:test_mason/core/utils/common_methods.dart';
+
+import '../cache/hive/hive_methods.dart';
+import '../routes/app_routers_import.dart';
+import '../utils/common_methods.dart';
 
 class AppInterceptors extends Interceptor {
   AppInterceptors();
@@ -40,7 +40,7 @@ class AppInterceptors extends Interceptor {
     debugPrint('RESPONSE[${response.statusCode}] => PATH: ${response.requestOptions.path}');
 
     if (response.statusCode == StatusCode.unauthorized) {
-      Navigator.of(AppRouters.navigatorKey.currentContext!).pushNamed('/login');
+      Navigator.of(AppRouters.navigatorKey.currentContext!).pushNamed('');
       return;
     }
 
