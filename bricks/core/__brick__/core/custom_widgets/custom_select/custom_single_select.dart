@@ -7,6 +7,7 @@ import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
 import 'package:test_mason/core/extension/context_extension.dart';
 
 import '../../../generated/l10n.dart';
+import '../../locale/app_locale_key.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_text_style.dart';
 import '../../utils/common_methods.dart';
@@ -15,6 +16,8 @@ import '../api_response_widget/api_response_widget.dart';
 import '../buttons/custom_button.dart';
 import '../custom_form_field/custom_form_field.dart';
 import 'custom_select_item.dart';
+import 'package:easy_localization/easy_localization.dart';
+
 
 class CustomSingleSelect extends StatefulWidget {
   final dynamic value;
@@ -70,16 +73,8 @@ class CustomSingleSelect extends StatefulWidget {
 class _CustomSingleSelectState extends State<CustomSingleSelect> {
   final _selectedEC = TextEditingController();
 
-  // void _showValue() {
-  //   Future.delayed(Duration.zero, () {
-  //     _selectedEC.text =
-  //         widget.items?.firstWhereOrNull((element) => element.value == widget.value)?.name ?? S().floorsExample.tr();
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
-   // _showValue();
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(
@@ -289,7 +284,7 @@ class _CustomSingleSelectBottomSheetState extends State<CustomSingleSelectBottom
           ),
           Padding(
             padding: const EdgeInsets.all(10),
-            child: Text(S().search, style: AppTextStyle.text16MSecond(context)),
+            child: Text(AppLocaleKey.search.tr(), style: AppTextStyle.text16MSecond(context)),
           ),
           Padding(
             padding: const EdgeInsets.all(10),
@@ -312,7 +307,7 @@ class _CustomSingleSelectBottomSheetState extends State<CustomSingleSelectBottom
                   child: CustomFormField(
                     fillColor: AppColor.offWhiteColor(context),
                     unFocusColor: AppColor.offWhiteColor(context),
-                    hintText: tr(S().search),
+                    hintText: tr(AppLocaleKey.search),
                     onChanged: (v) {
                       _items = widget.items?.where((element) => element.name.toLowerCase().contains(v)).toList();
                       setState(() {});

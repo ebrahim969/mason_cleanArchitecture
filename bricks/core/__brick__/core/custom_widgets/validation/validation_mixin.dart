@@ -1,24 +1,24 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
 import '../../../generated/l10n.dart';
+import '../../locale/app_locale_key.dart';
 
 mixin ValidationMixin<T extends StatefulWidget> on State<T> {
   String? validateName(String? value) {
     final RegExp nameRegExp = RegExp(r'[a-zA-Z]');
     if (value!.trim().isEmpty) {
-      return tr(S().validateName);
+      return tr(AppLocaleKey.validateName);
     } else if (!nameRegExp.hasMatch(value)) {
-      return tr(S().validateName);
+      return tr(AppLocaleKey.validateName);
     }
     return null;
   }
 
   String? validateEmail(String? value) {
     if (value!.trim().isEmpty) {
-      return tr(S().validateEmail);
+      return tr(AppLocaleKey.validateEmail);
     } else if (!_emailValidationStructure(value.trim())) {
-      return tr(S().validateEmailStructure);
+      return tr(AppLocaleKey.validateEmailStructure);
     }
     return null;
   }
@@ -32,10 +32,10 @@ mixin ValidationMixin<T extends StatefulWidget> on State<T> {
 
   String? validatePhoneSa(String? value) {
     if (value == null || value.isEmpty) {
-      return tr(S().validatePhone);
+      return tr(AppLocaleKey.validatePhone);
     }
     if (!value.validateSaudiPhoneNumber()) {
-      return tr(S().validatePhone);
+      return tr(AppLocaleKey.validatePhone);
     } else {
       return null;
     }
@@ -43,12 +43,12 @@ mixin ValidationMixin<T extends StatefulWidget> on State<T> {
 /*
   String? validatePhone(String? value, Country? country) {
     if (value!.trim().isEmpty) {
-      return tr(S().validatePhone);
+      return tr(AppLocaleKey.validatePhone);
     } else if (value.startsWith('0') &&
         (country != null &&
             (value.trim().length != (country.example.trim().length + 1)))) {
       return tr(
-        S().validatePhoneContainTenNumbers,
+        AppLocaleKey.validatePhoneContainTenNumbers,
         args: [
           "${country.example.trim().length + 1}",
         ],
@@ -57,7 +57,7 @@ mixin ValidationMixin<T extends StatefulWidget> on State<T> {
         (country != null &&
             (value.trim().length != country.example.trim().length))) {
       return tr(
-        S().validatePhoneContainTenNumbers,
+        AppLocaleKey.validatePhoneContainTenNumbers,
         args: [
           country.example.trim().length.toString(),
         ],
@@ -70,9 +70,9 @@ mixin ValidationMixin<T extends StatefulWidget> on State<T> {
 
   String? validatePassword(String? value) {
     if (value!.trim().length < 8) {
-      return tr(S().validatePassword);
+      return tr(AppLocaleKey.validatePassword);
     } else if (!validatePasswordStructure(value)) {
-      return tr(S().passwordStructureValidation);
+      return tr(AppLocaleKey.passwordStructureValidation);
     }
     return null;
   }
@@ -81,9 +81,9 @@ mixin ValidationMixin<T extends StatefulWidget> on State<T> {
   String? validateNewPassword(String? value) {
     _password = value!;
     if (value.trim().length < 8) {
-      return tr(S().validatePassword);
+      return tr(AppLocaleKey.validatePassword);
     } else if (!validatePasswordStructure(value)) {
-      return tr(S().passwordStructureValidation);
+      return tr(AppLocaleKey.passwordStructureValidation);
     }
     return null;
   }
@@ -96,32 +96,32 @@ mixin ValidationMixin<T extends StatefulWidget> on State<T> {
 
   String? validateConfirmPassword(String? value) {
     if (value!.trim().length < 8) {
-      return tr(S().validatePassword);
+      return tr(AppLocaleKey.validatePassword);
     } else if (_password != value) {
-      return tr(S().validateConfirmPassword);
+      return tr(AppLocaleKey.validateConfirmPassword);
     }
     return null;
   }
 
   String? validateEmptyField(String? value) {
     if (value!.trim().isEmpty) {
-      return tr(S().validateEmpty);
+      return tr(AppLocaleKey.validateEmpty);
     }
     return null;
   }
 
   String? validateEmptyDropDown(dynamic value) {
     if (value == null) {
-      return tr(S().validateEmpty);
+      return tr(AppLocaleKey.validateEmpty);
     }
     return null;
   }
 
   String? validateEmptyMultiSelect(List<dynamic>? value) {
     if (value == null) {
-      return tr(S().validateEmpty);
+      return tr(AppLocaleKey.validateEmpty);
     } else if (value.isEmpty) {
-      return tr(S().validateEmpty);
+      return tr(AppLocaleKey.validateEmpty);
     }
     return null;
   }

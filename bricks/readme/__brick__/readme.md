@@ -75,6 +75,8 @@ dependencies:
   photo_view: ^0.15.0
   pinput: ^5.0.0
   pretty_dio_logger: ^1.3.1
+  equatable: ^2.0.5
+  easy_localization:
   pusher_channels_flutter: ^2.2.1
   rename: ^3.0.2
   shimmer_animation: ^2.2.1
@@ -95,15 +97,7 @@ dependencies:
 
 ```
 
-### generate Intl for localization:
-```
-1- install Flutter Intl extension
-2- Initialize extension for your project (Ctrl+Shift+P) => [Flutter Intl: Initialize]
-3- Add other locales (ar)
-4- copy json files from (assets/default_local) to (l10n) in en and ar
-5- (C+S) and By default the extension generates and maintains files inside lib/generated/ folder 
 
-```
 
 
 ### generate project template:

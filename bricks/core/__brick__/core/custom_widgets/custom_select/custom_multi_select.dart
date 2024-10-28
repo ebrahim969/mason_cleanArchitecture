@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
 import 'package:test_mason/core/extension/context_extension.dart';
 import '../../../generated/l10n.dart';
+import '../../locale/app_locale_key.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_text_style.dart';
 import '../../utils/common_methods.dart';
@@ -11,6 +12,8 @@ import '../api_response_widget/api_response_widget.dart';
 import '../buttons/custom_button.dart';
 import '../custom_form_field/custom_form_field.dart';
 import 'custom_select_item.dart';
+import 'package:easy_localization/easy_localization.dart';
+
 
 class CustomMultiSelect extends StatefulWidget {
   final List<dynamic> value;
@@ -297,7 +300,7 @@ class _CustomMultiSelectBottomSheetState extends State<CustomMultiSelectBottomSh
                   child: CustomFormField(
                     fillColor: AppColor.offWhiteColor(context),
                     unFocusColor: AppColor.offWhiteColor(context),
-                    hintText: S().search,
+                    hintText: AppLocaleKey.search.tr(),
                     onChanged: (v) {
                       _items = widget.items?.where((element) => element.name.toLowerCase().contains(v)).toList();
                       setState(() {});

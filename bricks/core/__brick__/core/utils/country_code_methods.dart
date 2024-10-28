@@ -2,8 +2,10 @@ import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import '../../generated/l10n.dart';
 import '../extension/context_extension.dart';
+import '../locale/app_locale_key.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text_style.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class CountryCodeMethods {
   static Country getByCode(String code) {
@@ -48,7 +50,7 @@ class CountryCodeMethods {
         bottomSheetHeight: context.height() * 0.8,
         borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
         inputDecoration: InputDecoration(
-          hintText: S().search,
+          hintText: AppLocaleKey.search.tr(),
           hintStyle: AppTextStyle.hintStyle(context, listen: false),
           fillColor: AppColor.textFormFillColor(context, listen: false),
           filled: true,

@@ -10,6 +10,8 @@ import '../custom_widgets/custom_toast/custom_toast.dart';
 import '../extension/context_extension.dart';
 import '../routes/app_routers_import.dart';
 import '../theme/app_colors.dart';
+import 'package:easy_localization/easy_localization.dart';
+
 
 class CommonMethods {
   static void showAlertDialog({
@@ -42,7 +44,7 @@ class CommonMethods {
         actions: <Widget>[
           CupertinoDialogAction(
             child: Text(
-              S().ok,
+              AppLocaleKey.ok.tr(),
               style: TextStyle(
                 color: Colors.red,
                 fontSize: 16,
@@ -89,7 +91,7 @@ class CommonMethods {
         actions: [
           CupertinoDialogAction(
             child: Text(
-              S().no,
+              AppLocaleKey.no.tr(),
               style: TextStyle(
                 color: AppColor.darkTextColor(context),
                 fontSize: 16,
@@ -102,7 +104,7 @@ class CommonMethods {
           CupertinoDialogAction(
             onPressed: onPressed,
             child: Text(
-              S().yes,
+              AppLocaleKey.yes.tr(),
               style: TextStyle(
                 color: AppColor.darkTextColor(context),
                 fontSize: 16,
@@ -199,7 +201,7 @@ class CommonMethods {
       context: context,
       builder: (BuildContext context) => CupertinoActionSheet(
         title: Text(
-          S().language,
+          AppLocaleKey.language.tr(),
           style: TextStyle(
             color: Colors.black,
             fontSize: 16,
@@ -249,7 +251,7 @@ class CommonMethods {
         ],
         cancelButton: CupertinoActionSheetAction(
           child: Text(
-            S().cancel,
+            AppLocaleKey.cancel.tr(),
             style: TextStyle(
               color: Colors.black,
               fontSize: 16,

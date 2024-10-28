@@ -61,6 +61,7 @@ dependencies:
   flutter_widget_from_html: ^0.15.1
   gap: ^3.0.1
   geocoding: ^3.0.0
+  equatable: ^2.0.5
   google_maps_flutter: ^2.9.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
@@ -95,15 +96,6 @@ dependencies:
 
 ```
 
-### generate Intl for localization:
-```
-1- install Flutter Intl extension
-2- Initialize extension for your project (Ctrl+Shift+P) => [Flutter Intl: Initialize]
-3- Add other locales (ar)
-4- copy json files from (assets/default_local) to (l10n) in en and ar
-5- (C+S) and By default the extension generates and maintains files inside lib/generated/ folder 
-
-```
 
 
 ### generate project template:

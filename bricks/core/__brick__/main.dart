@@ -24,7 +24,7 @@ void main() async {
   runApp(
     BlocProvider(
       create: (context) => AppThemeCubit()..initial(),
-      child: const {{projectName}}(),
+      child: const {{projectName.pascalCase()}}(),
     ),
   );
 }

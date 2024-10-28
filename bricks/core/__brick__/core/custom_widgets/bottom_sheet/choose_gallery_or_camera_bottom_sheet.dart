@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../generated/l10n.dart';
 import '../../images/app_images.dart';
+import '../../locale/app_locale_key.dart';
 import '../../theme/app_colors.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class ChooseGalleryOrCameraBottomSheet extends StatelessWidget {
   final void Function()? onCamera;
@@ -49,7 +51,7 @@ class ChooseGalleryOrCameraBottomSheet extends StatelessWidget {
                         ),
                         const SizedBox(width: 10),
                         Text(
-                          S().camera,
+                          AppLocaleKey.camera.tr(),
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w400,
@@ -75,7 +77,7 @@ class ChooseGalleryOrCameraBottomSheet extends StatelessWidget {
                         ),
                         const SizedBox(width: 10),
                         Text(
-                          tr(S().gallery),
+                          tr(AppLocaleKey.gallery),
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w400,

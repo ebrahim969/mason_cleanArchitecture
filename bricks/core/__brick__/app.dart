@@ -7,19 +7,19 @@ import 'core/routes/routes_name.dart';
 import 'core/theme/style.dart';
 import 'generated/l10n.dart';
 
-class {{projectName}} extends StatefulWidget {
+class {{projectName.pascalCase()}} extends StatefulWidget {
   const {{projectName}}({super.key});
 
   static void setMyAppState(BuildContext context) async {
-    _{{projectName}}State? state = context.findAncestorStateOfType<_{{projectName}}State>();
+    _{{projectName.pascalCase()}}State? state = context.findAncestorStateOfType<_{{projectName.pascalCase()}}State>();
     state?.setMyAppState();
   }
 
   @override
-  State<{{projectName}}> createState() => _{{projectName}}State();
+  State<{{projectName}}> createState() => _{{projectName.pascalCase()}}State();
 }
 
-class _{{projectName}}State extends State<{{projectName}}> {
+class _{{projectName.pascalCase()}}State extends State<{{projectName.pascalCase()}}> {
   void setMyAppState() {
     setState(() {});
   }
@@ -43,7 +43,7 @@ class _{{projectName}}State extends State<{{projectName}}> {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: S.delegate.supportedLocales,
-              title: {{projectName}},
+              title: '${{projectName}}',
               debugShowCheckedModeBanner: false,
               theme: appThemeData(context),
               builder: BotToastInit(),
