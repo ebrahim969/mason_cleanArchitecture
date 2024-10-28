@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +13,6 @@ import '../api_response_widget/api_response_widget.dart';
 import '../buttons/custom_button.dart';
 import '../custom_form_field/custom_form_field.dart';
 import 'custom_select_item.dart';
-import 'package:easy_localization/easy_localization.dart';
 
 
 class CustomSingleSelect extends StatefulWidget {

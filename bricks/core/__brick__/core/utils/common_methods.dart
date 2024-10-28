@@ -1,11 +1,8 @@
-import 'package:bot_toast/bot_toast.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 import '../cache/hive/hive_methods.dart';
 import '../custom_widgets/custom_select/custom_select_item.dart';
-import '../custom_widgets/custom_toast/custom_toast.dart';
 import '../extension/context_extension.dart';
 import '../routes/app_routers_import.dart';
 import '../theme/app_colors.dart';
