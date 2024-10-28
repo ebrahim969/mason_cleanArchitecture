@@ -76,6 +76,7 @@ dependencies:
   photo_view: ^0.15.0
   pinput: ^5.0.0
   pretty_dio_logger: ^1.3.1
+  easy_localization: ^3.0.7
   pusher_channels_flutter: ^2.2.1
   rename: ^3.0.2
   shimmer_animation: ^2.2.1
@@ -91,9 +92,6 @@ dependencies:
   dartz: ^0.10.1
   get_it: ^8.0.1
   internet_connection_checker_plus: ^2.5.2
-  flutter_localizations:
-    sdk: flutter
-
 ```
 
 
