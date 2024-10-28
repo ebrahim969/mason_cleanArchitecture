@@ -6,7 +6,7 @@ import 'core/routes/app_routers_import.dart';
 import 'core/routes/routes_name.dart';
 import 'core/theme/style.dart';
 import 'package:easy_localization/easy_localization.dart';
-
+import 'package:country_picker/country_picker.dart';
 
 class {{projectName.pascalCase()}} extends StatefulWidget {
   const {{projectName.pascalCase()}}({super.key});

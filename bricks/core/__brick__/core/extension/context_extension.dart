@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 
@@ -15,7 +16,7 @@ extension ContextExtension on BuildContext {
     required String en,
   }) {
     String text = '';
-    switch (intl.getCurrentLocale()) {
+    switch (locale.languageCode) {
       case 'ar':
         text = ar;
         break;
@@ -30,7 +31,7 @@ extension ContextExtension on BuildContext {
     required dynamic ar,
     required dynamic en,
   }) {
-    switch (intl.getCurrentLocale()) {
+    switch (locale.languageCode) {
       case 'ar':
         return ar;
       case 'en':
@@ -42,7 +43,7 @@ extension ContextExtension on BuildContext {
     required VoidCallback ar,
     required VoidCallback en,
   }) {
-    switch (intl.getCurrentLocale()) {
+    switch (locale.languageCode) {
       case 'ar':
         ar.call();
         break;
@@ -53,6 +54,6 @@ extension ContextExtension on BuildContext {
   }
 
   bool isRTL() {
-    return intl.getCurrentLocale() == 'ar';
+    return intl.Bidi.isRtlLanguage(locale.languageCode);
   }
 }
