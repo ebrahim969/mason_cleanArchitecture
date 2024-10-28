@@ -91,9 +91,7 @@ dependencies:
   webview_flutter_wkwebview: ^3.15.0
   dartz: ^0.10.1
   get_it: ^8.0.1
-  internet_connection_checker_plus: ^2.5.2
-  flutter_localizations:
-    sdk: flutter
+  internet_connection_checker_plus: ^2.5.2   
 
 ```
 

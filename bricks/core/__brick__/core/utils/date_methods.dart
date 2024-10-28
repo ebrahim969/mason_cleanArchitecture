@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:timeago/timeago.dart' as timeago;
-
+import 'package:easy_localization/easy_localization.dart';
 import '../extension/context_extension.dart';
 import '../extension/date_time_extension.dart';
 import '../routes/app_routers_import.dart';

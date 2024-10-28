@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../cache/hive/hive_methods.dart';
 import '../routes/app_routers_import.dart';
 import '../utils/common_methods.dart';
-
+import 'status_code.dart';
 class AppInterceptors extends Interceptor {
   AppInterceptors();
 

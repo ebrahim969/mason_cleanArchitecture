@@ -3,7 +3,6 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
-import '../../generated/l10n.dart';
 import '../cache/hive/hive_methods.dart';
 import '../custom_widgets/custom_select/custom_select_item.dart';
 import '../custom_widgets/custom_toast/custom_toast.dart';
@@ -11,6 +10,8 @@ import '../extension/context_extension.dart';
 import '../routes/app_routers_import.dart';
 import '../theme/app_colors.dart';
 import 'package:easy_localization/easy_localization.dart';
+import '../locale/app_locale_key.dart';
+import '../services/injection_container.dart';
 
 
 class CommonMethods {

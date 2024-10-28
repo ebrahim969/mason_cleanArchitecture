@@ -5,10 +5,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/routes/app_routers_import.dart';
 import 'core/routes/routes_name.dart';
 import 'core/theme/style.dart';
-import 'generated/l10n.dart';
+import 'package:easy_localization/easy_localization.dart';
+
 
 class {{projectName.pascalCase()}} extends StatefulWidget {
-  const {{projectName}}({super.key});
+  const {{projectName.pascalCase()}}({super.key});
 
   static void setMyAppState(BuildContext context) async {
     _{{projectName.pascalCase()}}State? state = context.findAncestorStateOfType<_{{projectName.pascalCase()}}State>();
@@ -16,7 +17,7 @@ class {{projectName.pascalCase()}} extends StatefulWidget {
   }
 
   @override
-  State<{{projectName}}> createState() => _{{projectName.pascalCase()}}State();
+  State<{{projectName.pascalCase()}}> createState() => _{{projectName.pascalCase()}}State();
 }
 
 class _{{projectName.pascalCase()}}State extends State<{{projectName.pascalCase()}}> {
@@ -36,14 +37,12 @@ class _{{projectName.pascalCase()}}State extends State<{{projectName.pascalCase(
               // BlocProvider(create: (context) => AuthCubit()),
             ],
             child: MaterialApp(
-              localizationsDelegates: const [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
+              localizationsDelegates: [
+                ...context.localizationDelegates,
+                CountryLocalizations.delegate,
               ],
-              supportedLocales: S.delegate.supportedLocales,
-              title: '${{projectName}}',
+              supportedLocales: context.supportedLocales,
+              locale: context.locale,
               debugShowCheckedModeBanner: false,
               theme: appThemeData(context),
               builder: BotToastInit(),

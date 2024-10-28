@@ -1,6 +1,5 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
-import '../../generated/l10n.dart';
 import '../extension/context_extension.dart';
 import '../locale/app_locale_key.dart';
 import '../theme/app_colors.dart';

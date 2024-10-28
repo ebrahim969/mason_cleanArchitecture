@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
 import 'package:test_mason/core/extension/context_extension.dart';
-
-import '../../../generated/l10n.dart';
 import '../../locale/app_locale_key.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_text_style.dart';

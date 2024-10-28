@@ -159,7 +159,7 @@ class _CustomFormFieldState extends State<CustomFormField> {
                 contentPadding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 prefixIcon:
-                    widget.country != null && context.locale == const e('en')
+                    widget.country != null && context.locale == const Locale('en')
                         ? Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [

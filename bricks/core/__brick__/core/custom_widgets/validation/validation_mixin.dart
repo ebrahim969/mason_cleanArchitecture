@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../generated/l10n.dart';
 import '../../locale/app_locale_key.dart';
 
 mixin ValidationMixin<T extends StatefulWidget> on State<T> {

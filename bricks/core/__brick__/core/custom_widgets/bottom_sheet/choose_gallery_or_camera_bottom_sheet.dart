@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../generated/l10n.dart';
 import '../../images/app_images.dart';
 import '../../locale/app_locale_key.dart';
 import '../../theme/app_colors.dart';
