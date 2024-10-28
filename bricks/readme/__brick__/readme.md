@@ -124,15 +124,15 @@ mason make readme -o ../
     - assets/
 
   fonts:
-    - family: fontName 
+    - family: font
       fonts:
-        - asset: assets/fonts/fontName/fontName-Light.ttf
+        - asset: assets/fonts/font/font-Light.ttf
           weight: 300
-        - asset: assets/fonts/fontName/fontName-Regular.ttf
+        - asset: assets/fonts/font/font-Regular.ttf
           weight: 400
-        - asset: assets/fonts/fontName/fontName-Medium.ttf
+        - asset: assets/fonts/font/font-Medium.ttf
           weight: 500
-        - asset: assets/fonts/fontName/fontName-Bold.ttf
+        - asset: assets/fonts/font/font-Bold.ttf
           weight: 600
 
 ```
