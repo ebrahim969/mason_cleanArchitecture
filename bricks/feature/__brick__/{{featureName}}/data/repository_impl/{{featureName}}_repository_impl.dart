@@ -2,7 +2,7 @@ import '../data_source/remote_data_source/{{featureName}}_remote_data_source.dar
 import '../../domain/repository/{{featureName}}_repository.dart';
 import 'package:dartz/dartz.dart';
 import '../../../../core/error/failures.dart';
-import '../../domain/entity/auth_entity.dart';
+import '../../domain/entity/{{featureName}}_entity.dart';
 
 
 class {{featureName.pascalCase()}}RepositoryImpl implements {{featureName.pascalCase()}}Repository {
