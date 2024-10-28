@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:test_mason/core/enum/cubit_state/cubit_state.dart';
-import 'package:test_mason/core/extension/context_extension.dart';
+import '../../enum/cubit_state/cubit_state.dart';
+import '../../extension/context_extension.dart';
 import '../../locale/app_locale_key.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_text_style.dart';

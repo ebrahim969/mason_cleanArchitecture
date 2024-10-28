@@ -9,7 +9,7 @@ dart pub global activate mason_cli
 ```shell
 mkdir mason
 cd mason
-mason init
+mason inite
 ```
 
 ### add bricks to mason.yaml file 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:test_mason/core/extension/context_extension.dart';
+import '../../extension/context_extension.dart';
 
 import '../../images/app_images.dart';
 import '../../theme/app_theme.dart';

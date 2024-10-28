@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:test_mason/core/extension/context_extension.dart';
+import '../../extension/context_extension.dart';
 
 import '../../images/app_images.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_theme.dart';
 import '../buttons/custom_button.dart';
-
-
 
 class OfflineWidget extends StatelessWidget {
   final Axis axis;

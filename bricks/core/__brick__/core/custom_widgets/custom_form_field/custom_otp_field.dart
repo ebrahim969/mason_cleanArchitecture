@@ -2,8 +2,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
-import 'package:test_mason/core/extension/context_extension.dart';
-
+import '../../extension/context_extension.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_text_style.dart';
 
