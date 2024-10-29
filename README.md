@@ -1,21 +1,27 @@
-## Usage 
+## Usage
 
-### install maosn cli 
+### install maosn cli
+
 ```shell
 dart pub global activate mason_cli
 ```
 
-### add mason to your project 
+### add mason to your project
+
 ```shell
 mkdir mason
 cd mason
 mason init
 ```
 
-### add bricks to mason.yaml file 
-- replace paths with the bricks path on your pc 
+### add bricks to mason.yaml file
+
+- replace paths with the bricks path on your pc
+
 ```yaml
 bricks:
+  i18n:
+    path: D:/projects/bricks/i18n (replace with real path)
   readme:
     path: D:/projects/bricks/readme (replace with real path)
   assets:
@@ -24,9 +30,10 @@ bricks:
     path: D:/projects/bricks/core (replace with real path)
   feature:
     path: D:/projects/bricks/feature (replace with real path)
-``` 
+```
 
-### get bricks 
+### get bricks
+
 ```shell
 mason get
 ```
@@ -34,6 +41,7 @@ mason get
 ## Dependencies
 
 Below is a list of default dependencies used in this project:
+
 ```yaml
 dependencies:
   flutter:
@@ -94,48 +102,51 @@ dependencies:
   internet_connection_checker_plus: ^2.5.2
 ```
 
-
-
 ### generate project template:
+
 ```shell
 mason make core -o .././lib
 ```
 
 ### add new feature (enter feature name)
+
 ```shell
-mason make feature -o .././lib/features 
+mason make feature -o .././lib/features
 ```
 
 ### generate assets folder
+
 ```shell
 mason make assets -o ../assets
 ```
 
 ### generate readme file (enter project name)
+
 ```shell
 mason make readme -o ../
 ```
 
 ### Add assets and fonts paths in pubspec.yaml file
+
 ```yaml
-  assets:
-    - assets/
+assets:
+  - assets/
 
-  fonts:
-    - family: fontName 
-      fonts:
-        - asset: assets/fonts/fontName/fontName-Light.ttf
-          weight: 300
-        - asset: assets/fonts/fontName/fontName-Regular.ttf
-          weight: 400
-        - asset: assets/fonts/fontName/fontName-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/fontName/fontName-Bold.ttf
-          weight: 600
-
+fonts:
+  - family: fontName
+    fonts:
+      - asset: assets/fonts/fontName/fontName-Light.ttf
+        weight: 300
+      - asset: assets/fonts/fontName/fontName-Regular.ttf
+        weight: 400
+      - asset: assets/fonts/fontName/fontName-Medium.ttf
+        weight: 500
+      - asset: assets/fonts/fontName/fontName-Bold.ttf
+        weight: 600
 ```
 
-### clear mason cache 
+### clear mason cache
+
 ```shell
 mason cache clear
 ```

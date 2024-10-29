@@ -2,6 +2,8 @@
 # Run "mason get" to install all registered bricks.
 # To learn more, visit https://docs.brickhub.dev.
 bricks:
+  i18n:
+    path: bricks/i18n
   feature:
     path: bricks/feature
   core:
@@ -9,4 +11,4 @@ bricks:
   assets:
     path: bricks/assets
   readme:
-    path: bricks/readme      
+    path: bricks/readme
