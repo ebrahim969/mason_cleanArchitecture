@@ -130,6 +130,7 @@ mason make readme -o ../
 
 ```yaml
 assets:
+  - i18n/
   - assets/
 
 fonts:
