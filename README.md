@@ -114,6 +114,12 @@ mason make core -o .././lib
 mason make feature -o .././lib/features
 ```
 
+### generate lang folder
+
+```shell
+mason make i18n -o ../i18n
+```
+
 ### generate assets folder
 
 ```shell
