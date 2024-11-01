@@ -1,9 +1,9 @@
 class ResponseHandlerPost {
   static responseHandlerPost(dynamic response) {
-    if (response.statusCode != 200) {
-      throw Exception(response.data['message']);
+    if (response['success'] != true) {
+      throw response.data['message'];
     } else {
-      return '';
+      return null;
     }
   }
 }
