@@ -152,6 +152,12 @@ fonts:
         weight: 600
 ```
 
+### clear mason cache
+
+```shell
+mason cache clear
+```
+
 ## create android flavors
 ### add this to android/app/build.gradle.
 
@@ -181,8 +187,3 @@ android:label="@string/app_name"
 mason make launch -o ../.vscode
 ```
 
-### clear mason cache
-
-```shell
-mason cache clear
-```
