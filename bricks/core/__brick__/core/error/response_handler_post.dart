@@ -3,7 +3,7 @@ class ResponseHandlerPost {
     if (response['success'] != true) {
       throw response.data['message'];
     } else {
-      return null;
+      return response['data'];
     }
   }
 }
