@@ -152,6 +152,35 @@ fonts:
         weight: 600
 ```
 
+## create android flavors
+### add this to android/app/build.gradle.
+
+```shell
+  flavorDimensions += "default"
+
+  productFlavors {
+      create("development") {
+          dimension = "default"
+          resValue(type = "string", name = "app_name", value = "your app name")
+          applicationIdSuffix = ".dev"
+      }
+      create("production") {
+          dimension = "default"
+          resValue(type = "string", name = "app_name", value = "your app name")
+      }
+```
+### change label in AndroidManifest.xml
+
+```shell
+android:label="@string/app_name"
+```
+
+### generate launch file (vscode configuration)
+
+```shell
+mason make launch -o ../.vscode
+```
+
 ### clear mason cache
 
 ```shell

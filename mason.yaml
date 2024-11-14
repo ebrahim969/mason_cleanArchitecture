@@ -12,3 +12,5 @@ bricks:
     path: bricks/assets
   readme:
     path: bricks/readme
+  launch:
+    path: bricks/launch  

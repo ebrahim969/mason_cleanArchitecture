@@ -11,7 +11,7 @@ dart pub global activate mason_cli
 ```shell
 mkdir mason
 cd mason
-mason inite
+mason init
 ```
 
 ### add bricks to mason.yaml file
@@ -69,6 +69,7 @@ dependencies:
   flutter_widget_from_html: ^0.15.1
   gap: ^3.0.1
   geocoding: ^3.0.0
+  equatable: ^2.0.5
   google_maps_flutter: ^2.9.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
@@ -83,7 +84,6 @@ dependencies:
   photo_view: ^0.15.0
   pinput: ^5.0.0
   pretty_dio_logger: ^1.3.1
-  equatable: ^2.0.5
   easy_localization: ^3.0.7
   pusher_channels_flutter: ^2.2.1
   rename: ^3.0.2
@@ -114,6 +114,12 @@ mason make core -o .././lib
 mason make feature -o .././lib/features
 ```
 
+### generate lang folder
+
+```shell
+mason make i18n -o ../i18n
+```
+
 ### generate assets folder
 
 ```shell
@@ -134,18 +140,40 @@ assets:
   - assets/
 
 fonts:
-  - family: font
+  - family: fontName
     fonts:
-      - asset: assets/fonts/font/font-Light.ttf
+      - asset: assets/fonts/fontName/fontName-Light.ttf
         weight: 300
-      - asset: assets/fonts/font/font-Regular.ttf
+      - asset: assets/fonts/fontName/fontName-Regular.ttf
         weight: 400
-      - asset: assets/fonts/font/font-Medium.ttf
+      - asset: assets/fonts/fontName/fontName-Medium.ttf
         weight: 500
-      - asset: assets/fonts/font/font-Bold.ttf
+      - asset: assets/fonts/fontName/fontName-Bold.ttf
         weight: 600
 ```
 
+## create android flavors
+### add this to android/app/build.gradle.
+
+```shell
+  flavorDimensions += "default"
+
+  productFlavors {
+      create("development") {
+          dimension = "default"
+          resValue(type = "string", name = "app_name", value = "your app name")
+          applicationIdSuffix = ".dev"
+      }
+      create("production") {
+          dimension = "default"
+          resValue(type = "string", name = "app_name", value = "your app name")
+      }
+```
+### change label in AndroidManifest.xml
+
+```shell
+android:label="@string/app_name"
+```
 ### clear mason cache
 
 ```shell
