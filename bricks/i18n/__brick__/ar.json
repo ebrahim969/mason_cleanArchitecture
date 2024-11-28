@@ -62,6 +62,8 @@
     "notifications": "الاشعارات",
     "activeNotifications": "تفعيل الاشعارات",
     "confirm": "تأكيد",
-    "language": "اللغة"
+    "language": "اللغة",
+    "noInternet" : "لا يوجد شبكه",
+    "PleaseCheckYourConnectionAndTryAgain" : "يرجى التحقق من اتصالك ثم المحاولة مرة أخرى."
   }
   

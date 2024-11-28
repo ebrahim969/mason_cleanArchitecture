@@ -32,11 +32,7 @@ class _{{projectName.pascalCase()}}State extends State<{{projectName.pascalCase(
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (_, child) {
-          return MultiBlocProvider(
-            providers: const [
-              // BlocProvider(create: (context) => AuthCubit()),
-            ],
-            child: MaterialApp(
+          return MaterialApp(
               localizationsDelegates: [
                 ...context.localizationDelegates,
                 CountryLocalizations.delegate,
@@ -50,8 +46,7 @@ class _{{projectName.pascalCase()}}State extends State<{{projectName.pascalCase(
               initialRoute: RoutesName.splashScreen,
               onGenerateRoute: AppRouters.onGenerateRoute,
               navigatorKey: AppRouters.navigatorKey,
-            ),
-          );
+            );
         });
   }
 }

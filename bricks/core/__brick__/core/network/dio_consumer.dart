@@ -1,7 +1,7 @@
+import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-
 import '../services/injection_container.dart';
 import 'api_consumer.dart';
 import 'app_interceptors.dart';
@@ -77,7 +77,7 @@ class DioConsumer implements ApiConsumer {
   }
 
   dynamic _handleResponseAsJson(Response<dynamic> response) {
-    final responseJson = response.data;
+    final responseJson = jsonDecode(response.data.toString());
     return responseJson;
   }
 }

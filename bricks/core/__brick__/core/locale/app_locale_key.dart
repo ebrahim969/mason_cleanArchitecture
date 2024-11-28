@@ -128,6 +128,9 @@ class AppLocaleKey {
   static const String complaintTitle = 'complaintTitle';
   static const String complaintDetails = 'complaintDetails';
   static const String pleaseEnterTheCorrectCode = 'pleaseEnterTheCorrectCode';
+  static const String noInternet = 'noInternet';
+  static const String pleasCheckYourConnectionAndTryAgain =
+      'pleasCheckYourConnectionAndTryAgain';
   static const String passwordStructureValidation =
       'passwordStructureValidation';
 }

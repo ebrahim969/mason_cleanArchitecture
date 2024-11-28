@@ -62,5 +62,7 @@
     "notifications": "Notifications",
     "activeNotifications": "Activate Notifications",
     "confirm": "Confirm",
-    "language": "Language"
+    "language": "Language",
+    "noInternet" : "No Internet",
+    "PleaseCheckYourConnectionAndTryAgain" : "Please check your connection and try again."
   }
